@@ -1,0 +1,56 @@
+Name
+Primary Skillset?
+Experience?
+
+RIA (Rich Internet Application [RIA] / Single Page Application [SPA])
+    => Using HTML + CSS + JavaScript + React
+    => A web application offering the same user experience as that of desktop application
+    => A part of the application (UI) is sent to the browser and executed in the browser
+
+
+Classical Web Application
+    From early 1990s to 2010
+
+Static Web Site vs Web Application
+
+JavaScript Basics
+ES6
+Asynchronous Programming
+    Callbacks
+    Promises
+    Async Await
+
+UI Responsibilities
+    Display data to the user
+    Handle user interaction
+    Dynamically change the data in the UI
+
+Browser
+    Presentation - HTML + CSS
+    Dynamic - JS + DOM (Document Object Model)
+    DOM
+        - document (top level object)
+    
+    
+JavaScript (ES5)
+    Data Types
+        number, string, boolean
+        undefined, object, function
+
+    Language Constructs
+        var, if else, switch case, for, function, try catch finally
+    APIs
+        Math, Array, Error, RegEx, setTimeout, clearTimeout, setInterval, clearInterval etc
+
+    Functions
+        Variadic functions
+            accept and manipulate varying number of arguments
+
+        Implicit values available in function
+            - arguments
+                array like object containing all the argument values 
+            - this
+
+
+Loosely typed language
+

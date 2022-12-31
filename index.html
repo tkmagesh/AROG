@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greeter</title>
+    <style>
+        .header{
+            color : blue;
+        }
+        #divMessage{
+            font-size: 18pt;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="header">Greeter</h1>
+    <hr>
+    <label for="">User Name :</label>
+    <input type="text" name="" id="txtUserName">
+    <button id="btnGreet">Greet</button>
+    <div id="divMessage">[Dummy Message]</div>
+    <script>
+        function onBtnGreetClick() {
+            var tb = document.getElementById("txtUserName")
+            var msg = 'Hi ' + tb.value + ', Have a nice day'
+            var dm = document.getElementById("divMessage")
+            dm.innerText = msg
+        }
+        var bg = document.getElementById('btnGreet')
+        bg.addEventListener('click', onBtnGreetClick)
+    </script>
+</body>
+</html>

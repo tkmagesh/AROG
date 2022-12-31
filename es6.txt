@@ -1,0 +1,41 @@
+ES6
+
+1. let
+2. const
+3. array destructuring
+    var nos = [3,1,4,2,5]
+    var [x, y] = nos
+
+4. rest operator (array)
+    var nos = [3,1,4,2,5]
+    var [x, y, ...z] = nos
+
+5. spread operator (array)
+    var nos = [3,1,4,2,5]
+    var newNos = [10,20,30, ...nos]
+
+6. object destructuring
+    var emp = {
+        id : 100,
+        name : "Magesh",
+        salary : 10000
+    }
+    var {id, salary} = emp
+
+    var {id:x, salary:y} = emp
+
+7. rest operator (object)
+    var emp = {
+        id : 100,
+        name : "Magesh",
+        salary : 10000
+    }
+    var {salary, ...z} = emp
+
+8. spread operator (object)
+    var emp = {
+        id : 100,
+        name : "Magesh",
+        salary : 10000
+    }
+    var newEmp = { ...emp, city : "Bangalore" }

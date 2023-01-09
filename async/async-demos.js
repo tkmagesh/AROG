@@ -80,9 +80,25 @@
         console.log(`[@client] triggering the add service`)
         var addResult = await addAsyncPromise(100, 200)
         console.log(`[@client] addResult = ${addResult}`)
-        var multiplyResult = await multiplyAsyncPromise(addResult, 2)
+        
+        console.log(`[@client] triggering the multiply service`)
+        var multiplyResult = await multiplyAsyncPromise(10, 20)
         console.log(`[@client] multiplyResult = ${multiplyResult}`)
     }
     window['multiPromiseClient'] = multiPromiseClient
+
+    async function parallelPromiseClient() {
+        console.log(`[@client] triggering the add service`)
+        var addPromise =  addAsyncPromise(100, 200)
+        
+        console.log(`[@client] triggering the multiply service`)
+        var multiplyPromise =  multiplyAsyncPromise(10, 20)
+
+        let [addResult, multiplyResult] = await Promise.all([addPromise, multiplyPromise])
+        console.log(`[@client] addResult = ${addResult}`)
+        console.log(`[@client] multiplyResult = ${multiplyResult}`)
+    }
+
+    window['parallelPromiseClient'] = parallelPromiseClient
 
 })()

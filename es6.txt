@@ -1,5 +1,7 @@
-ES6
+Reference :
+    http://es6-features.org/
 
+ES6
 1. let
 2. const
 3. array destructuring
@@ -39,3 +41,62 @@ ES6
         salary : 10000
     }
     var newEmp = { ...emp, city : "Bangalore" }
+
+9. default arguments
+    function add(x=10,y=20){
+        return x + y
+    }
+    add()
+    add(100)
+    add(undefined, 200)
+    add(100,200)
+
+10. arrow functions
+    //function statement
+    function add(x,y){
+        return x + y
+    }
+
+    //function expression
+    var add = function(x,y){
+        return x + y
+    }
+
+    //arrow function
+    var add = (x,y) => {
+        return x + y
+    }
+
+    var add = (x,y) => x + y
+
+11. class
+    class Employee{
+        //public attributes
+        id = 0;
+        name = '';
+        salary = 0;
+
+        //constructor method
+        constructor(id, name, salary){
+            this.id = id;
+            this.name = name;
+            this.salary = salary;
+        }
+
+        display(){
+            return `id = ${this.id}, name = ${this.name}, salary = ${this.salary}`
+        }
+    }
+
+    //inheritence
+    class FullTimeEmployee extends Employee {
+        benefits = ''
+        constructor(id, name, salary, benefits){
+            super(id, name, salary)
+            this.benefits = benefits
+        }
+        display(){
+                return `${super.display()}, benefits = ${this.benefits}`
+        }
+    }
+

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel">
+        
+            var root;
+            var counter = 0
+            
+            function onBtnRenderClick(){
+                ++counter
+                var divEl = (
+                    <div>
+                        <h1>React Introduction!</h1>
+                        <hr/>
+                        <div>
+                            <label>Counter : </label>
+                            <span>{counter}</span>
+                        </div>
+                        <div>
+                            <h3>Overview</h3>
+                            <p>Aute Lorem laboris amet pariatur exercitation est esse. Adipisicing commodo mollit eiusmod commodo culpa officia. Adipisicing sunt ex fugiat ullamco cillum anim exercitation pariatur velit officia ut. Non adipisicing ullamco Lorem elit ut eiusmod dolor eu aliqua quis sunt consequat ad. Aliquip commodo nisi do dolor aliqua sit ut velit non.</p>
+                            <p>In labore do fugiat deserunt tempor eu et dolor ut ullamco commodo eiusmod ipsum consectetur. Ipsum commodo sit ut Lorem incididunt sint. Ad sit duis in ea. Pariatur amet dolore exercitation proident ullamco nisi minim qui ullamco qui magna. Sunt veniam veniam laborum in nulla veniam irure. Magna fugiat anim aute consectetur labore laboris quis fugiat laboris Lorem cillum minim.</p>
+                            <p>Do nostrud veniam quis veniam culpa eiusmod non esse cupidatat sunt cupidatat ad ut ullamco. Incididunt ullamco eiusmod eu velit laborum in enim ea est eiusmod nulla. In non cupidatat officia sint ad irure ut officia tempor elit non proident ullamco. Ea irure aliquip enim labore enim fugiat ad ea cupidatat amet aliquip fugiat ullamco. Labore officia minim elit laboris nisi eiusmod adipisicing est tempor eu dolor. Proident nulla et incididunt voluptate. Tempor proident quis et qui tempor sunt.</p>
+                        </div>
+                        <div>
+                            <h3>Advantages</h3>
+                            <ol>
+                                <li>Declarative</li>
+                                <li>Efficient</li>
+                            </ol>
+                        </div>
+                    </div>
+                )
+                root.render(divEl)
+                // Rendering using browsers DOM
+                
+               
+            }
+            function onDocumentLoad(){
+                var btnRender = document.getElementById('btnRender')
+                btnRender.addEventListener('click', onBtnRenderClick)
+                var container = document.getElementById('root')
+                root = ReactDOM.createRoot(container)
+            }
+            window.addEventListener('load', onDocumentLoad)
+        
+    </script>
+</head>
+<body>
+    <button id="btnRender">Render</button>
+    <!-- 
+        <div>
+        <label for="">Counter :</label>
+        <span id="spanCounter">0</span>
+    </div> 
+-->
+    <div id="root">
+
+    </div>
+</body>
+</html>

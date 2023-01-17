@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script>
+        (function(){
+            var root;
+            var counter = 0
+            function onBtnRenderClick(){
+                counter++
+
+                // Rendering using React's VDOM
+                var h1 = React.createElement('h1', { id: 'heading-1' }, 'Welcome to VDOM! - ' + counter)
+                root.render(h1)
+                // Rendering using browsers DOM
+                
+                document.getElementById('spanCounter').innerText = counter
+            }
+            function onDocumentLoad(){
+                var btnRender = document.getElementById('btnRender')
+                btnRender.addEventListener('click', onBtnRenderClick)
+                var container = document.getElementById('root')
+                root = ReactDOM.createRoot(container)
+            }
+            window.addEventListener('load', onDocumentLoad)
+        })()
+    </script>
+</head>
+<body>
+    <button id="btnRender">Render</button>
+    <div>
+        <label for="">Counter :</label>
+        <span id="spanCounter">0</span>
+    </div>
+    <div id="root">
+
+    </div>
+</body>
+</html>

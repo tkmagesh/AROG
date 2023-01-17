@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script>
+        (function(){
+            var root;
+            var counter = 0
+            
+            function onBtnRenderClick(){
+                ++counter
+                var divEl = React.createElement('div', null,
+                    React.createElement('div', null, 
+                        React.createElement('label', null, "Counter :"),
+                        React.createElement('span', null, counter)
+                    ), 
+                    React.createElement('h1', null, 'React Introduction!'),
+                    React.createElement('hr'),
+                    React.createElement('div', null,
+                        React.createElement('h3', null, 'Overview'),
+                        React.createElement('p', null, 'Commodo sit tempor et excepteur. Laborum ad nostrud aliquip qui aliquip excepteur esse. Dolor duis eu fugiat commodo minim occaecat non proident id qui cupidatat. Occaecat commodo cillum laboris tempor laboris adipisicing ullamco ut consequat est. Magna nisi ea tempor laborum laboris quis.'),
+                        React.createElement('p', null, 'Duis nisi aute tempor labore ullamco cupidatat enim ad aute veniam duis. Id laborum fugiat anim est do. Ipsum elit magna eu exercitation fugiat sit consequat aliqua eu sit eiusmod. Consectetur proident officia sunt occaecat ut cupidatat mollit aliquip ipsum. Sint minim labore amet dolor eiusmod. Velit culpa labore aliqua elit commodo culpa consequat nisi est deserunt laborum.'),
+                        React.createElement('p', null, 'Sint minim qui Lorem culpa amet Lorem laboris duis excepteur occaecat ex et culpa. Adipisicing et excepteur tempor ipsum aliqua sunt nisi. Laborum ex aliquip occaecat ex do incididunt dolor tempor esse anim consectetur reprehenderit. Exercitation exercitation magna irure eiusmod ut Lorem sit magna eu dolor aute.'),
+                    ),
+                    React.createElement('div', null,
+                        React.createElement('h3', null, 'Advantages'),
+                        React.createElement('ul', null, 
+                            React.createElement('li', null, 'Declarative'),
+                            React.createElement('li', null, 'Efficient'),
+                        )
+                    )
+                )
+                root.render(divEl)
+                // Rendering using browsers DOM
+                
+               
+            }
+            function onDocumentLoad(){
+                var btnRender = document.getElementById('btnRender')
+                btnRender.addEventListener('click', onBtnRenderClick)
+                var container = document.getElementById('root')
+                root = ReactDOM.createRoot(container)
+            }
+            window.addEventListener('load', onDocumentLoad)
+        })()
+    </script>
+</head>
+<body>
+    <button id="btnRender">Render</button>
+    <!-- 
+        <div>
+        <label for="">Counter :</label>
+        <span id="spanCounter">0</span>
+    </div> 
+-->
+    <div id="root">
+
+    </div>
+</body>
+</html>

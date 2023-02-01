@@ -67,3 +67,7 @@ Node.JS
         events
         promises
         async await
+
+
+To install express-generator
+    npm install -g express-generator

@@ -1,3 +1,8 @@
+Youtube Links
+    JavaScript - https://bit.ly/javascript-training-videos
+    React - https://bit.ly/react-videos
+    Node.js - https://bit.ly/node-training-videos
+
 Name
 Primary Skillset?
 Experience?
@@ -54,3 +59,11 @@ JavaScript (ES5)
 
 Loosely typed language
 
+Node.JS
+    JavaScript Runtime
+
+    Async Operations
+        callbacks
+        events
+        promises
+        async await
